@@ -1,0 +1,689 @@
+@charset "UTF-8";
+@import "initial";
+
+
+// 載入思源宋體 Medium
+// font-family: 'Noto Serif TC', serif;
+// font-weight: 500;
+
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
+
+*{
+  transition: padding 0.3s, width 0.3s, min-height 0.3s, font-size 0.3s, background-image 0.3s, transform 0.3s, filter 0.3s;
+}
+body{
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0;
+  background-color: #decc75;
+  // background-image: url(../images/bg.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  // background-size: cover;
+  background-attachment: fixed;
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.55);
+  // background-image: url(../images/line.png);
+  // background-repeat: no-repeat;
+  // background-position: center;
+  z-index: 10;
+  backdrop-filter: blur(1.25em);
+}
+
+.mark {
+  // width: 380px;
+  // height: 380px;
+  background-image: url(../images/mark-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  animation: jump 3s infinite;
+  // transition: animation 0.3s;
+  cursor: pointer;
+}
+
+@keyframes jump {
+  0%{
+    background-image: url(../images/mark-1.png);
+  }
+  50%{
+    background-image: url(../images/mark-2.png);
+  }
+  0%{
+    background-image: url(../images/mark-1.png);
+  }
+}
+
+
+.ossian{
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 1900px;
+  width: 100%;
+  
+}
+
+// 遊戲的 LOGO
+
+// .game-logo{
+//   margin: 0 auto;
+//   padding: 1em;
+//   max-width: 356px;
+//   img{
+//     width: 100%;
+//   }
+// }
+
+
+// 卷軸的手風琴效果
+
+.reel{
+  margin: 0 auto 2em;
+  max-width: 1286px;
+  // transition: transform 0.3s;
+  // &:nth-child(odd){
+  //   transform: rotate(2deg);
+  //   &:hover{
+  //     transform: rotate(0deg);
+  //   }
+  // }
+  // &:nth-child(even){
+  //   transform: rotate(-2deg);
+  //   &:hover{
+  //     transform: rotate(0deg);
+  //   }
+  // }
+
+  .reel-img {
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+
+    img{
+      width: 100%;
+    }
+
+    .data-1{
+      position: absolute; 
+      top: 0; 
+      left: 0;
+    }
+  }
+  .reel-content {
+    display: none;
+    overflow: hidden;
+    position: relative;
+    z-index: 4;
+    // margin: 0 auto;
+    padding: 0 0.625em 0.625em;
+    max-width: calc(1286px - 4em);
+    background-color: #855a38;
+    // background-image: url(../images/end-of-story.png);
+    // background-repeat: no-repeat;
+    // background-position: right bottom;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 16px 8px -5px rgba(0, 0, 0, 0.4), 0 0 2px 2px #b88461 inset;
+    border: 3px solid #623f23;
+    .copywriting{
+      padding: 13em 0 1em;
+      width: 100%;
+      color: #ffdda9;
+      line-height: 1.5;
+      text-align: center;
+      background-image: url(../images/maps.png);
+      background-repeat: no-repeat;
+      background-position: top center;
+      &.copywriting-2{
+        // padding: 15em 0 1em;
+        background-image: url(../images/maps-2.png);
+      }
+      &.copywriting-3{
+        background-image: url(../images/maps-3.png);
+      }
+    }
+    .yellow-bg{
+      // margin-bottom: 46px;
+      padding: 0.625em;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5em;
+      width: 100%;
+      background-image: url(../images/yellow-bg.png);
+      background-repeat: repeat-y;
+      background-size: 100%;
+      border-radius: 5px;
+      box-shadow: 0 0 100px rgba(133, 90, 56, 0.5) inset;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+      .yellow-white-bg{
+        // margin-top: 2.5em;
+        // padding: 0.625em;
+        width: 100%;
+        background-color: #fff8d9;
+        background-image: url(../images/mark-4.png);
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        border-radius: 5px;
+        &.pb-2{
+          padding-bottom: 2em;
+        }
+        .wax-seal{
+          margin: -40px auto 0;
+          max-width: 103px;
+          img{
+            width: 100%;
+          }
+        }
+      }
+      .content{
+        position: relative;
+        line-height: 1.45;
+        >em{
+          font-style: normal;
+          color: #547feb;
+        }
+      }
+      dl{
+        &.fishing-prince{
+          display: flex;
+          // flex-wrap: nowrap;
+          gap: 1em;
+          row-gap: 0;
+          margin: 0;
+          // padding: 0 2em;
+          dd{
+            margin: 0;
+            padding: 0;
+            &:nth-last-child(1){
+              text-align: center;
+            }
+            div{
+              padding: 1em 0 0;
+              column-fill: balance;
+            }
+          }
+          // em{
+          //   font-style: normal;
+          //   color: #547feb;
+          // }
+        }
+      }
+    }
+    .article-title{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-position: left center;
+      &.title-1{
+        background-image: url(../images/title-1.png);
+      }
+      &.title-2{
+        background-image: url(../images/title-2.png);
+      }
+      &.title-3{
+        background-image: url(../images/title-3.png);
+      }
+      &.title-4{
+        background-image: url(../images/title-4.png);
+      }
+      &.title-5{
+        background-image: url(../images/title-5.png);
+      }
+      &.title-6{
+        background-image: url(../images/title-6.png);
+      }
+      &.title-7{
+        background-image: url(../images/title-7.png);
+      }
+      span{
+        display: none;
+      }
+    }
+  }
+}
+.team-note{
+  text-align: center;
+}
+.team-title{
+  margin: 0 auto;
+  padding: 1rem 0 0;
+  max-width: 295px;
+  img{
+    width: 100%;
+  }
+}
+.huan-sou{
+  margin: 0 auto;
+  max-width: 500px;
+  img{
+    width: 100%;
+  }
+  figcaption{
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    text-align: center;
+    color: #ffec9b;
+    >em{
+      font-style: normal;
+      color: white;
+    }
+  }
+  &:nth-last-child(1){
+    figcaption{
+      padding-bottom: 0.5em;
+    }
+  }
+}
+.info-photo{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  img{
+    max-width: 100%;
+  }
+  figcaption{
+    text-align: center;
+  }
+}
+
+.fire::first-letter{
+  padding-right: 0.2em;
+  float: left;
+  font-size: 2em;
+  line-height: 1.25;
+  font-weight: bold;
+  color: #855a38;
+}
+
+
+// 美人魚的切換
+.eudemons-rows{
+  padding: 1em 0;
+  display: grid;
+  gap: 1em;
+  row-gap: 0;
+  border-bottom: 1px dashed #855a38;
+  h3{
+    margin: 0;
+    padding: 0 0.5em;
+    display: inline-block;
+    color: #ccf6fb;
+    background-color: #855a38;
+    border-radius: 2em;
+  }
+}
+.water-bg{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  justify-content: center;
+  margin: 0 auto;
+  // max-width: 300px;
+  // height: 300px;
+  background-image: url(../images/water.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  transform: scale(0.9);
+  filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.35));
+  .buttons{
+    display: grid;
+    gap: 0.15em;
+    justify-content: center;
+    width: 100%;
+    // transform: translateY(-1em);
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 66px;
+      background-repeat: no-repeat;
+      background-position: bottom center;
+    }
+    // 人魚公主
+    &.button1{
+      grid-template-columns: 1fr 1fr 1fr;
+      // &::before{
+      //   background-image: url(../images/eudemons-name-1.png);
+      // }
+    }
+    // 寄居蟹
+    &.button2{
+      grid-template-columns: 1fr 1fr 1fr;
+      // &::before{
+      //   background-image: url(../images/eudemons-name-2.png);
+      // }
+    }
+    // 魚人精靈
+    &.button3{
+      grid-template-columns: 1fr 1fr 1fr;
+      // &::before{
+      //   background-image: url(../images/eudemons-name-3.png);
+      // }
+    }
+    // 釣魚王子
+    &.button4{
+      grid-template-columns: unset;
+      // &::before{
+      //   background-image: url(../images/eudemons-name-4.png);
+      // }
+      button{
+        &:nth-child(1),
+        &:nth-child(2){
+          display: none;
+        }
+        // &:nth-child(3){
+        //   justify-self: center;
+        // }
+      }
+    }
+    button{
+      // width: 75px;
+      // height: 38px;
+      text-decoration: none;
+      appearance: none;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      cursor: pointer;
+      transition: transform 0.3s;
+      &:hover{
+        transform: scale(1.15);
+      }
+      // 水屬性
+      &.tag-water{
+        background-image: url(../images/tag-1.png);
+      }
+      // 火屬性
+      &.tag-fire{
+        background-image: url(../images/tag-2.png);
+      }
+      // 風屬性
+      &.tag-wind{
+        background-image: url(../images/tag-3.png);
+      }
+      // 表情包-待機
+      &.tag-emoji-1{
+        background-image: url(../images/tag-4-1.png);
+      }
+      // 表情包-歡呼
+      &.tag-emoji-2{
+        background-image: url(../images/tag-4-1.png);
+      }
+      // 表情包-受擊/暈眩/死亡
+      &.tag-emoji-3{
+        background-image: url(../images/tag-4-1.png);
+      }
+      // 表情包-悲傷
+      &.tag-emoji-4{
+        background-image: url(../images/tag-4-1.png);
+      }
+    }
+  }
+}
+.eudemons{
+  // overflow: hidden;
+  position: relative;
+  // max-width: 235px;
+  // width:100%;
+  // height: 235px;
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.orange{
+  color: #f0782a;
+  background-color: #ffec9b;
+}
+
+// 史蓋窩克海的圖片
+.sgwk{
+  float: right;
+  margin: 1em 0 0 0;
+  padding-left: 1em;
+  max-width: 300px;
+  text-align: center;
+  img{
+    width: 100%;
+  }
+}
+.sgwk-title{
+  margin: 0 auto;
+  padding-top: 1em;
+  max-width: 540px;
+  text-align: center;
+  img{
+    width: 100%;
+  }
+}
+
+// 小道消息
+
+.gossip{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1.5em 1em;
+  margin: 0;
+  list-style: none;
+  &.pt-1-pb-1{
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  li{
+    position: relative;
+    
+    color: rgba(184, 132, 97, 1);
+    background-color: #fffcf1;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    border-radius: 0.5em;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+    h4{
+      position: absolute;
+      top: -0.75em;
+      margin: 0;
+      padding: 0.25em 0.5em;
+      font-size: 1.25em;
+      text-align: center;
+      color: #fff8d9;
+      background-color: rgba(184, 132, 97, 1);
+      background-image: url(../images/mark-3.png);
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      background-size: 100%;
+      border-radius: 0.15em;
+      transform: rotate(-4deg);
+      // transform: translateY(-1.25em);
+    }
+  }
+}
+.deep{
+  padding: 1em;
+  background-color: #623f23;
+  border-radius: 1em;
+  h3{
+    margin: 0;
+    padding: 0 0 1em 0;
+    text-align: center;
+    color: #fff8d9;
+  }
+  &.team-bg{
+    background-image: url(../images/team-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+}
+
+.screenshot{
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1em;
+  dd{
+    position: relative;
+    margin: 0;
+    padding: 1px;
+    // width: 250px;
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.15);
+    &.none,
+    &:nth-last-child(1){
+      &::after{
+        content: unset;
+      }
+    }
+    &::after{
+      // content: '';
+      position: absolute;
+      top: calc(50% - 25px);
+      right: -35px;
+      width: 70px;
+      height: 50px;
+      background-image: url(../images/j.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      z-index: 2;
+      animation: os 0.5s infinite;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+      // border: 1px solid red;
+    }
+    figure{
+      margin: 0;
+      width: 100%;
+      figcaption{
+        padding: 0.5em;
+        text-align: center;
+        // font-size: 80%;
+      }
+      img{
+        width: 100%;
+        border-radius: 1em;
+      }
+    }
+  }
+}
+@keyframes os {
+  0%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(0.85em);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+.blue{
+  color: #00a1ff;
+}
+.red{
+  color: #e85117;
+}
+.green{
+  color: #169b13;
+}
+
+// slider
+
+.slider{
+  position: relative;
+  margin: 0 auto;
+  padding: 3em 0;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.item{
+  padding: 5em 1em 1em 1em;
+  position: absolute;
+  // top: calc(50% - 200px);
+  width: 300px;
+  max-width: 90%;
+  text-align: justify;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.obj-1{
+  background-image: url(../images/obj/obj-1.png);
+}
+.obj-2{
+  background-image: url(../images/obj/obj-2.png);
+}
+.obj-3{
+  background-image: url(../images/obj/obj-3.png);
+}
+.obj-4{
+  background-image: url(../images/obj/obj-4.png);
+}
+.obj-5{
+  background-image: url(../images/obj/obj-5.png);
+}
+.obj-6{
+  background-image: url(../images/obj/obj-6.png);
+}
+.obj-7{
+  background-image: url(../images/obj/obj-7.png);
+}
+.obj-8{
+  background-image: url(../images/obj/obj-8.png);
+}
+#prev, #next{
+  position: absolute;
+  top: 50%;
+  left: -35px;
+  color: black;
+  width: 45px;
+  height: 60px;
+  font-size: xxx-large;
+  font-weight: bold;
+  transform: translateY(-50%);
+  background-color: transparent;
+  background-image: url(../images/left.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  z-index: 1;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#next{
+  left: unset;
+  right: -35px;
+  background-image: url(../images/right.png);
+}
+
+@import "rwd";
